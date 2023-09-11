@@ -105,12 +105,12 @@ io.on("connection", (socket) => {
     if (playerSides.left < 0)
       backEndPlayers[socket.id].x = backEndPlayer.radius;
 
-    if (playerSides.right > 1920)
+    if (playerSides.right > 1024)
       backEndPlayers[socket.id].x = 1024 - backEndPlayer.radius;
 
     if (playerSides.top < 0) backEndPlayers[socket.id].y = backEndPlayer.radius;
 
-    if (playerSides.bottom > 1080)
+    if (playerSides.bottom > 576)
       backEndPlayers[socket.id].y = 576 - backEndPlayer.radius;
   });
 });
