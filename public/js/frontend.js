@@ -250,38 +250,6 @@ window.addEventListener('keyup', (event) => {
   }
 })
 
-// ... (your existing code)
-
-// Add the following code for joystick control
-const joystick = document.getElementById("joystick");
-let joystickPressed = false;
-let joystickX = canvas.width / 2;
-let joystickY = canvas.height / 2;
-
-// Event listener for joystick interaction
-joystick.addEventListener("mousedown", (e) => {
-    joystickPressed = true;
-    joystickX = e.clientX - canvas.getBoundingClientRect().left;
-    joystickY = e.clientY - canvas.getBoundingClientRect().top;
-});
-
-document.addEventListener("mousemove", handleJoystickMove);
-document.addEventListener("mouseup", handleJoystickRelease);
-
-function handleJoystickMove(e) {
-    if (joystickPressed) {
-        joystickX = e.clientX - canvas.getBoundingClientRect().left;
-        joystickY = e.clientY - canvas.getBoundingClientRect().top;
-
-        // Use joystickX and joystickY values to control your game logic here
-    }
-}
-
-function handleJoystickRelease() {
-    joystickPressed = false;
-}
-
-// ... (the rest of your existing code)
 
 
 document.querySelector('#usernameForm').addEventListener('submit', (event) => {
